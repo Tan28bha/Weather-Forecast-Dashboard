@@ -55,9 +55,7 @@ let weather = {
     document.querySelector(".temp-max").innerText = `Max Temp: ${temp_max} ${unitSymbol}`;
     document.querySelector(".humidity").innerText = `Humidity: ${humidity}%`;
     document.querySelector(".weather-data").classList.remove("loading");
-    document.body.style.backgroundImage = "url('https://unsplash.com/s/photos/nature-landscape?orientation=landscape')";
-
-  },
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')";},
 
   // Displays forecast data on the webpage
   displayForecast: function (forecastData) {
