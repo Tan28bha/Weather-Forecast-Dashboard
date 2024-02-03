@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Weather Input Section -->
+    <div class="weather-input">
+      <h2 class="Heading">Weather Dashboard</h2>
+      <div class="search">
+        <input class="search-bar" type="text" placeholder="E.g.,Hyderabad,Pune, Mumbai">
+        <div class="button-container">
+          <button class="search-btn" onclick="weather.search()">Search</button>
+          <button class="location-btn" onclick="weather.getLocation()">Use Current Location</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unit Toggle Section -->
+    <div class="unit-toggle">
+      <label>
+        <input type="radio" name="unit" value="metric" checked onchange="weather.toggleUnit()"> Celsius
+      </label>
+      <label>
+        <input type="radio" name="unit" value="imperial" onchange="weather.toggleUnit()"> Fahrenheit
+      </label>
+    </div>
+
+    <!-- Weather Data Section -->
+    <div class="weather-data">
+      <!-- Current Weather Section -->
+      <div class="current-weather">
+        <h2 class="city">City Name (Country)</h2>
+        <img class="icon" src="Loading" alt="Weather Icon">
+        <p class="description"></p>
+        <p class="temp"></p>
+        <p class="temp-min"></p>
+        <p class="temp-max"></p>
+        <p class="humidity"></p>
+        <p class="wind"></p>
+      </div>
+
+      <!-- Forecast Section -->
+      <div class="forecast-container">
+        <h2>5-Days Forecast</h2>
+        <div class="weather-cards" id="forecast-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="./script.js" defer></script>
+</body>
+
+</html>
